@@ -36,32 +36,66 @@
   }
   
   /*cloth*/
-  .sec1 {
-    display: flex;            
-    flex-wrap: wrap;          
-    gap: 10px;                
-    justify-content: center;  
+/* Animation for .sec1 container */
+.sec1 {
+  display: flex;            
+  flex-wrap: wrap;          
+  gap: 10px;                
+  justify-content: center;  
+  opacity: 0;              /* Initially hidden */
+  transform: translateY(20px); /* Slight downward shift */
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Animation for individual items */
+.sc1 {
+  flex: 1 1 calc(25% - 20px);   
+  max-width: calc(25% - 20px);  
+  box-shadow: 0 0 4px #606464;
+  border-radius: 8px;
+  box-sizing: border-box;
+  overflow: hidden;      
+  opacity: 0;              /* Initially hidden */
+  transform: translateY(20px); /* Slight downward shift */
+  animation: fadeInItem 0.8s ease-out forwards;
+  animation-delay: calc(var(--delay) * 0.1s); /* Staggered delay */
+}
+
+.sc1 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;  
+}
+
+.sc1 img:hover, .sc1 img:active {
+  transform: scale(1.1);        
+}
+
+/* Keyframes for fade-in animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .sc1 {
-    flex: 1 1 calc(25% - 20px);   
-    max-width: calc(25% - 20px);  
-    box-shadow: 0 0 4px#606464;
-    border-radius: 8px;
-    box-sizing: border-box;
-    overflow: hidden;             
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .sc1 img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;  
+}
+
+@keyframes fadeInItem {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  .sc1 img:hover, .sc1 img:active {
-    transform: scale(1.1);        
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
   
   /* Tablet View: 2 items per row */
   @media screen and (max-width: 768px) {
