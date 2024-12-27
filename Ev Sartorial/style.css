@@ -333,7 +333,7 @@ input{
 .about-slide h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  font-weight: bold;
+  font-weight: 300;
 }
 
 .about-slide p {
@@ -380,10 +380,10 @@ input{
   text-transform: uppercase;
   letter-spacing: 1px;
   border-bottom: 2px solid #ccc;
-  display: inline-block;
   padding-bottom: 5px;
-  margin-top: 35px;
+  margin-top: 55px;
   text-align: center;
+  align-items: center;
 }
 
 .about-content p {
@@ -401,7 +401,7 @@ input{
 /* Image Section */
 .about-image {
   flex: 1;
-  min-width: 300px;
+  min-width: 800px;
   max-width: 500px;
   display: flex;
   justify-content: center;
@@ -484,6 +484,8 @@ display: flex;
 .about-image {
  margin-bottom: 100%;
  margin-top: -10px;
+ min-width: 300px;
+
 }
 }
 

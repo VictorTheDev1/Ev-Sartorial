@@ -131,11 +131,10 @@
           </ul>
         </div>
         <div class="contact-form">
-          <form action="https://formsubmit.co/your-email@example.com" method="POST">
+          <form action="https://formsubmit.co/your-email@example.com" method="POST" target="_blank">
             <!-- Hidden FormSubmit Inputs -->
             <input type="hidden" name="_subject" value="New Contact Request">
             <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_autoresponse" value="Thank you for reaching out to Ev Sartorial! We'll get back to you soon.">
             
             <div class="form-group">
               <input type="text" id="name" name="name" placeholder="Your Full Name" required>
@@ -147,6 +146,16 @@
               <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
             </div>
             <button type="submit" class="btn-submit">Send Message</button>
+       
+       
+            <!-- Loading Bar -->
+          <div id="loadingBar" class="loading-bar"></div>
+          
+          <!-- Success and Failure Alerts -->
+          <div id="alertSuccess" class="alert alert-success">Message sent successfully! <br> We will get back to you shortly.</div>
+          <div id="alertFailure" class="alert alert-failure">Message not sent. Please try again.</div>
+        
+         
           </form>
         </div>
       </div>
