@@ -247,7 +247,7 @@ input{
   font-size: var(--h1-font-size);
   font-weight: var(--weight-700);
   line-height: 1.4;
-  font-family: Bodoni Moda SC;
+  font-family: ubuntu;
 }
 .home__title span{
   color: #708090;
@@ -308,6 +308,52 @@ input{
 
 /* About Us Section */
 /* Global Styles */
+/* Slider Container */
+.about-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding: 20px;
+  background: #f9fafc;
+  border-radius: 10px;
+}
+
+/* Individual Slide */
+.about-slide {
+  flex: 0 0 90%;
+  scroll-snap-align: start;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.about-slide h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.about-slide p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive Adjustment */
+@media (max-width: 768px) {
+  .about-slide {
+    flex: 0 0 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-slide {
+    flex: 0 0 100%;
+  }
+}
 
 /* About Us Section */
 .about-us {
@@ -327,7 +373,7 @@ input{
   transform: translateY(20px);
 }
 
-.about-content h2 {
+.ab1 h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
   color: #333;
@@ -336,6 +382,8 @@ input{
   border-bottom: 2px solid #ccc;
   display: inline-block;
   padding-bottom: 5px;
+  margin-top: 35px;
+  text-align: center;
 }
 
 .about-content p {
@@ -375,6 +423,7 @@ input{
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+display: flex;
 }
 
 .image-placeholder img {
@@ -430,7 +479,12 @@ input{
 
   .image-placeholder {
     height: 300px;
+    margin-bottom: -500px;
   }
+.about-image {
+ margin-bottom: 100%;
+ margin-top: -10px;
+}
 }
 
 .images {
@@ -983,7 +1037,6 @@ p{
   }
   .home__title{
     font-size: 34px;
-    margin-left: 13px;
   }
 }
 .fo{

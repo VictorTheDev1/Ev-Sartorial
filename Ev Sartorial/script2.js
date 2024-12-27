@@ -78,3 +78,11 @@
     
         observer.observe(aboutSection);
       });
+
+      document.querySelectorAll('.about-slider').forEach((slider) => {
+        slider.addEventListener('wheel', (e) => {
+          e.preventDefault();
+          slider.scrollLeft += e.deltaY;
+        });
+      });
+      
