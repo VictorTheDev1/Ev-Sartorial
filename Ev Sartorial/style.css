@@ -352,6 +352,7 @@ input{
 @media (max-width: 480px) {
   .about-slide {
     flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 
