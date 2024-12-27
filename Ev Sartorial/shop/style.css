@@ -21,7 +21,15 @@
     align-items: center;
     width: 100%;              
   }
-  
+  body{
+    color: var(--text-color);
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    font-weight: var(--weight-400);
+    animation: fadeInUp 1s ease-out forwards;
+    transform: translateY(20px);
+    transition: 4s;
+  }
   .head img {
     max-width: 240px;
     margin: 0;                
